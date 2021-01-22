@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { StyleSheet, Text, View, Dimensions } from 'react-native';
 
 // Modules
@@ -12,7 +12,6 @@ const ChartAffected = ({ deathInEhpad, deathInHospital }) => {
 
     const [averageDeathHospital, setAverageDeathHospital] = useState((deathInHospital / (deathInEhpad + deathInHospital) * 100).toFixed(0));
     const [averageDeathEhpad, setAverageDeathEhpad] = useState((deathInEhpad / (deathInEhpad + deathInHospital) * 100).toFixed(0));
-
 
 
     return (
@@ -31,14 +30,25 @@ const ChartAffected = ({ deathInEhpad, deathInHospital }) => {
             </View>
 
             <View style={styles.containerRight}>
-                <View style={styles.right}>
+                {/* <View style={styles.right}>
                     <View style={styles.oval} />
-                </View>
+                </View> 
                 <View style={styles.percent1}>
                     <Text style={{ color: '#2A4DA6' }}>{averageDeathHospital}%</Text>
                 </View>
                 <View style={styles.percent2}>
                     <Text style={{ color: '#E47CC0' }}>{averageDeathEhpad}%</Text>
+                </View> */}
+                <View style={[styles.chartCol]} >
+                    <Text style={styles.percent}> {averageDeathEhpad}%</Text>
+                    <View style={[styles.col, { height: parseInt(averageDeathEhpad), backgroundColor: "#E47CC0" }]} />
+                    <Text style={styles.titleCol}></Text>
+                </View>
+
+                <View style={[styles.chartCol]} >
+                    <Text style={styles.percent}> {averageDeathHospital}%</Text>
+                    <View style={[styles.col, { height: parseInt(averageDeathHospital), backgroundColor: "#2A4DA6" }]} />
+                    <Text style={styles.titleCol}></Text>
                 </View>
             </View>
 
@@ -107,5 +117,30 @@ const styles = StyleSheet.create({
     },
     containerRight: {
         padding: 15,
+        flexDirection: 'row',
+        // borderWidth: 1
+    },
+
+    col: {
+        width: 60,
+        height: 40,
+        backgroundColor: '#AEB8C9',
+    },
+
+    percent: {
+        color: 'gray',
+        textAlign: 'center',
+    },
+    chartCol: {
+        flexDirection: 'column-reverse',
+        marginLeft: 10,
+        // borderWidth: 1
+    },
+
+    titleCol: {
+        color: 'gray',
+        fontWeight: '600',
+        fontSize: 12,
+        marginTop: 6,
     },
 });
