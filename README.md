@@ -21,11 +21,22 @@
 
 - [AppliCovid](#applicovid)
   - [Table of contents](#table-of-contents)
+  - [Installation](#installation)
   - [Images](#images)
   - [Creators](#creators)
 
 
+## Installation
 
+Android:
+
+```
+1) npm install 
+or
+yarn install
+
+2) npx react-native run-android
+```
 
 
 ## Images
