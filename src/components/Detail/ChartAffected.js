@@ -19,12 +19,12 @@ const ChartAffected = ({ deathInEhpad, deathInHospital }) => {
                 <Text style={styles.title}>DÉCÈS</Text>
                 <View style={styles.containerDot}>
                     <View style={styles.dot} />
-                    <Text style={styles.male}>Hôpital</Text>
+                    <Text style={styles.male}>EHPAD</Text>
                 </View>
 
                 <View style={styles.containerDot}>
-                    <View style={[styles.dot, { backgroundColor: '#E47CC0' }]} />
-                    <Text style={styles.male}>EHPAD</Text>
+                    <View style={[styles.dot, { backgroundColor: '#2A4DA6' }]} />
+                    <Text style={styles.male}>Hôpital</Text>
                 </View>
             </View>
 
@@ -34,10 +34,10 @@ const ChartAffected = ({ deathInEhpad, deathInHospital }) => {
                     <View style={styles.overOval} />
                 </View>
                 <View style={styles.percent1}>
-                    <Text style={{ color: '#E47CC0' }}>{averageDeathEhpad}%</Text>
+                    <Text style={{ color: '#2A4DA6' }}>{averageDeathHospital}%</Text>
                 </View>
                 <View style={styles.percent2}>
-                    <Text style={{ color: '#2A4DA6' }}>{averageDeathHospital}%</Text>
+                    <Text style={{ color: '#E47CC0' }}>{averageDeathEhpad}%</Text>
                 </View>
             </View>
         </View>
@@ -68,7 +68,7 @@ const styles = StyleSheet.create({
     dot: {
         width: 12,
         height: 12,
-        backgroundColor: '#2A4DA6',
+        backgroundColor: '#E47CC0',
         borderRadius: 12,
         marginRight: 6,
     },
@@ -86,7 +86,7 @@ const styles = StyleSheet.create({
         height: W / 5,
         borderWidth: 10,
         borderRadius: W / 5,
-        borderColor: '#2A4DA6',
+        borderColor: '#E47CC0',
     },
 
     overOval: {
@@ -96,20 +96,20 @@ const styles = StyleSheet.create({
         borderWidth: 10,
         borderRadius: W / 5,
         borderTopColor: 'transparent',
-        borderBottomColor: 'transparent',
-        borderLeftColor: 'transparent',
-        borderColor: '#E47CC0',
+        // borderBottomColor: 'transparent',
+        // borderLeftColor: 'transparent',
+        borderColor: '#2A4DA6',
         transform: [{ rotate: '-45deg' }],
     },
 
     percent1: {
         position: 'absolute',
-        top: 1,
+        top: 90,
         right: 1,
     },
     percent2: {
         position: 'absolute',
-        bottom: 1,
+        bottom: 90,
         left: 1,
     },
     containerRight: {
