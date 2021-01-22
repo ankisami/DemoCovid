@@ -13,6 +13,8 @@ const ChartAffected = ({ deathInEhpad, deathInHospital }) => {
     const [averageDeathHospital, setAverageDeathHospital] = useState((deathInHospital / (deathInEhpad + deathInHospital) * 100).toFixed(0));
     const [averageDeathEhpad, setAverageDeathEhpad] = useState((deathInEhpad / (deathInEhpad + deathInHospital) * 100).toFixed(0));
 
+
+
     return (
         <View style={styles.container}>
             <View style={styles.left}>
@@ -31,7 +33,6 @@ const ChartAffected = ({ deathInEhpad, deathInHospital }) => {
             <View style={styles.containerRight}>
                 <View style={styles.right}>
                     <View style={styles.oval} />
-                    <View style={styles.overOval} />
                 </View>
                 <View style={styles.percent1}>
                     <Text style={{ color: '#2A4DA6' }}>{averageDeathHospital}%</Text>
@@ -40,6 +41,8 @@ const ChartAffected = ({ deathInEhpad, deathInHospital }) => {
                     <Text style={{ color: '#E47CC0' }}>{averageDeathEhpad}%</Text>
                 </View>
             </View>
+
+
         </View>
     );
 };
@@ -86,20 +89,12 @@ const styles = StyleSheet.create({
         borderWidth: 10,
         borderRadius: W / 5,
         borderColor: '#E47CC0',
-    },
-    overOval: {
-        position: 'absolute',
-        width: W / 5,
-        height: W / 5,
-        borderWidth: 10,
-        borderRadius: W / 5,
-        borderTopColor: 'transparent',
+        borderTopColor: '#E47CC0',
         // borderBottomColor: 'transparent',
         // borderLeftColor: 'transparent',
         borderColor: '#2A4DA6',
         transform: [{ rotate: '-45deg' }],
     },
-
     percent1: {
         position: 'absolute',
         top: 90,
