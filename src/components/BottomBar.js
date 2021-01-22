@@ -10,24 +10,24 @@ import Feather from 'react-native-vector-icons/Feather';
 const BottomBar = ({ navigation, data }) => {
 
     return (
-        <View>
-            <View style={styles.container}>
-                <View style={[styles.col1, { borderTopRightRadius: 200 }]}>
-                    {/* <Feather name="cast" size={30} color="#B6BBC4" /> */}
+        <View style={styles.container}>
+            {/* <View style={styles.container}> */}
+                {/* <View style={[styles.col1, { borderTopRightRadius: 200 }]}>
+                    <Feather name="cast" size={30} color="#B6BBC4" />
                 </View>
 
                 <View style={[styles.col1, { borderTopLeftRadius: 200 }]}>
-                    {/* <Feather name="bell" size={30} color="#B6BBC4" /> */}
+                    <Feather name="bell" size={30} color="#B6BBC4" />
                 </View>
             </View>
             <View style={styles.center} />
-            <View style={styles.center2} />
+            <View style={styles.center2} /> */}
 
             <TouchableOpacity
                 style={styles.volumnCon}
-                onPress={() => navigation.navigate("Detail", { data: data })}
+                onPress={() => navigation.navigate("Detail", {data: data})}
             >
-                <Feather name="plus" size={30} color="#222" />
+                <Feather name="plus" size={30} color="#FFF" />
             </TouchableOpacity>
         </View>
     );
@@ -37,9 +37,6 @@ export default BottomBar;
 
 const styles = StyleSheet.create({
     container: {
-        flexDirection: 'row',
-        justifyContent: 'space-between',
-        backgroundColor: '#F4F4F4',
     },
     col1: {
         width: '42%',
@@ -68,11 +65,11 @@ const styles = StyleSheet.create({
     },
     volumnCon: {
         alignSelf: 'center',
-        backgroundColor: '#fff',
+        backgroundColor: '#257AF2',
         position: 'absolute',
         width: 70,
         height: 70,
-        top: -50,
+        top: -90,
         borderRadius: 100,
         justifyContent: 'center',
         alignItems: 'center',

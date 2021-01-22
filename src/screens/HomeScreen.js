@@ -37,7 +37,10 @@ const HomeScreen = (props) => {
                     : (
                         <>
                             <View style={styles.container}>
-                                <ScrollView style={styles.flex}>
+                                <ScrollView
+                                    style={styles.flex}
+                                    showsVerticalScrollIndicator={false}
+                                >
                                     <Header
                                         numCas={apiData.FranceGlobalLiveData[0].casConfirmes}
                                         title={"Cas total de Corona Virus"}
@@ -70,6 +73,8 @@ const HomeScreen = (props) => {
                                             pourcentage2Num={apiData.FranceGlobalLiveData[0].reanimation}
                                         />
                                     </View>
+
+                                    <View style={{ height: 90 }} />
                                 </ScrollView>
                             </View>
 

@@ -24,7 +24,7 @@ const ChartAge = () => {
                         .map((e, i) => {
 
                             return (
-                                <View style={[styles.chartCol, (i == 0) & { marginLeft: 0 }]}>
+                                <View style={[styles.chartCol, (i == 0) & { marginLeft: 0 }]} key={`${e} ${i}`}>
                                     <Text style={styles.percent}> {pourcentageArray[i]}%</Text>
                                     <View style={[styles.col, { height: pourcentageArray[i] }]} />
                                     <Text style={styles.titleCol}>{ageArray[i]}</Text>
