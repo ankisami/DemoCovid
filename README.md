@@ -41,8 +41,8 @@ yarn install
 
 ## Images
 
- <img src="https://github.com/ankisami/DemoCovid/blob/main/src/assets/Simulator%20Screen%20Shot%20-%20iPhone%2011%20-%202021-01-22%20at%2005.37.28.png" alt="Logo" width=200 height=450>
- <img src="https://github.com/ankisami/DemoCovid/blob/main/src/assets/Simulator%20Screen%20Shot%20-%20iPhone%2011%20-%202021-01-22%20at%2005.37.32.png" alt="Logo" width=200 height=450>
+ <img src="https://github.com/ankisami/DemoCovid/blob/main/src/assets/Screenshot_1611296740.png" alt="Logo" width=200 height=450>
+ <img src="https://github.com/ankisami/DemoCovid/blob/main/src/assets/Screenshot_1611296746.png" alt="Logo" width=200 height=450>
 
 
 
