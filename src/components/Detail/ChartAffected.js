@@ -80,7 +80,6 @@ const styles = StyleSheet.create({
     left: {
         flex: 1,
     },
-
     oval: {
         width: W / 5,
         height: W / 5,
@@ -88,7 +87,6 @@ const styles = StyleSheet.create({
         borderRadius: W / 5,
         borderColor: '#E47CC0',
     },
-
     overOval: {
         position: 'absolute',
         width: W / 5,
